@@ -7,7 +7,7 @@ import { monitor } from './monitor.js';
 import { look } from './input.js';
 
 export function updateCamera(dt) {
-  const d = camera.userData.d, p = reducedMotion ? 0 : 0.35;
+  const d = camera.userData.d, p = reducedMotion ? 0 : (camera.aspect < 0.8 ? 0.15 : 0.35);   // menos paralaxe no celular
   const near = Math.min(...CONFIG.flags.map(f => Math.hypot(f.x - player.x, f.y - player.y)));
   let zt = Math.max(0, Math.min(1, (420 - near) / 340)); zt = zt * zt * (3 - 2 * zt);
   if (ui.entering || state.escaped) zt = 1.9;

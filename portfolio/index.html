@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/mascot.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 <!-- Luzes de fundo da Landing Page -->
@@ -26,11 +27,12 @@
 <main id="site" hidden></main>
 <div id="fallback">Não consegui carregar o 3D. Verifique sua conexão e recarregue a página.</div>
 
+<!-- Camada do Mascote que "Pula" para a tela -->
 <div id="mascot-layer"><canvas id="mascot-canvas" width="60" height="80"></canvas></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>if (typeof THREE === "undefined") document.getElementById("fallback").style.display = "grid";</script>
-
+<!-- Código da aplicação (módulos ES: precisa de um servidor local, veja o README) -->
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

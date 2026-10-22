@@ -28,16 +28,26 @@ export function initCarousels() {
       }
     }
 
-    card.addEventListener('mouseenter', () => {
+    function start() {
+      if (intervalId) return;
       intervalId = setInterval(() => {
         currentIndex = (currentIndex + 1) % validImages.length;
         goToSlide(currentIndex);
       }, 1800);
-    });
+    }
 
-    card.addEventListener('mouseleave', () => {
+    function stop() {
       if (intervalId) clearInterval(intervalId);
+      intervalId = null;
       goToSlide(0);
-    });
+    }
+
+    if (matchMedia("(hover: none)").matches) {
+      // Celular/tablet: não existe hover, então o carrossel roda enquanto o card está visível na tela
+      new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop()), { threshold: 0.6 }).observe(card);
+    } else {
+      card.addEventListener('mouseenter', start);
+      card.addEventListener('mouseleave', stop);
+    }
   });
 }

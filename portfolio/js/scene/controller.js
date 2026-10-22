@@ -37,6 +37,8 @@ const sR = new THREE.Mesh(cylG, sleeveMat); sR.scale.set(0.27, 0.5, 0.27); sR.ro
 const handR = { h: fistR };
 
 export function updateController(t) {
+  // Celular: só o controle (sem braços), para não atravessarem a mesa na câmera mais próxima
+  fistL.visible = fistR.visible = innerWidth > 700;
   const m = player.moving, amp = m ? 1 : 0.25;
   pad.position.y = -1.75 + Math.sin(t * 2) * 0.01;
   let dirx = 0, diry = 0;

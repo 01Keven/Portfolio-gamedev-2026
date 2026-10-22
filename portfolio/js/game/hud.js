@@ -7,7 +7,7 @@ export function drawHud(t) {
   g.textAlign = "left"; g.font = "bold 18px 'Poppins'"; g.fillStyle = "rgba(23,19,31,.7)"; g.fillRect(14, 14, 250, 34); g.fillStyle = "#fff"; g.fillText(CONFIG.name, 26, 37);
 
   if (state.hintAlpha > 0 && !state.escaped) {
-    const txt = "Clique no mapa para andar"; g.font = "16px 'Poppins'"; g.textAlign = "center"; const w = g.measureText(txt).width + 36;
+    const txt = matchMedia("(pointer: coarse)").matches ? "Toque no mapa para andar" : "Clique no mapa para andar"; g.font = "16px 'Poppins'"; g.textAlign = "center"; const w = g.measureText(txt).width + 36;
     g.globalAlpha = state.hintAlpha * (0.85 + Math.sin(t * 3) * 0.15); g.fillStyle = "#17131f"; g.fillRect(game.width / 2 - w / 2, game.height - 58, w, 38);
     g.fillStyle = CONFIG.colors.sand; g.fillRect(game.width / 2 - w / 2, game.height - 58, 5, 38); g.fillStyle = "#fff"; g.fillText(txt, game.width / 2 + 3, game.height - 33); g.globalAlpha = 1;
   }

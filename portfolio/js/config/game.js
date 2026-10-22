@@ -1,7 +1,10 @@
 /* Configuração do mini-jogo 2D que roda dentro do monitor */
+// Celular: o jogo é desenhado numa área menor (mostra menos mapa), então tudo aparece maior na tela
+const COMPACT = matchMedia("(max-width: 700px)").matches;
+
 export const CONFIG = {
   name: "KEVEN CÂNDIDO", role: "Game Developer · Unity · C#",
-  screenW: 960, screenH: 600, worldW: 2600, worldH: 1700, walkSpeed: 170,
+  screenW: COMPACT ? 576 : 960, screenH: COMPACT ? 360 : 600, worldW: 2600, worldH: 1700, walkSpeed: 170,
   colors: { room: 0x060913, plastic: 0x2a2438, grass: "#4b9b6e", grassDark: "#438c62", sand: "#e9cf94", flag: "#ff6b57", skin: "0x00e1ff", ink: "#17131f" },
   center: { x: 1300, y: 850 },
   flags: [{ label: "Projetos", x: 1500, y: 520 }, { label: "Sobre", x: 700, y: 1050 }, { label: "Contato", x: 1700, y: 1250 }]

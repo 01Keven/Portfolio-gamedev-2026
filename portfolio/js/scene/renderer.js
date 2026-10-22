@@ -22,5 +22,5 @@ export function resize() {
   const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false);
   camera.aspect = w / h; camera.updateProjectionMatrix();
   const t = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
-  camera.userData.d = Math.max(5.6 / (2 * t), 5.9 / (2 * t * camera.aspect));
+  camera.userData.d = Math.max(5.6 / (2 * t), (camera.aspect < 0.8 ? 5.2 : 5.9) / (2 * t * camera.aspect));  // celular em pé: a tela do jogo ocupa quase toda a largura
 }

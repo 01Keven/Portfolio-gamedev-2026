@@ -1,0 +1,55 @@
+/* Responsivo: tablets e celulares. Fica por último para ajustar o que vem antes. */
+
+/* Evita que o grid de cards estoure em telas muito estreitas */
+.grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+
+@media (max-width: 800px) {
+  .top { padding: 12px 16px; gap: 8px; }
+  .top button { padding: 0 18px; font-size: 13px; }
+  .wrap { padding: 0 18px; }
+  .sec { padding: 64px 0 12px; scroll-margin-top: 72px; }
+  #site h2 { font-size: 30px; margin-bottom: 24px; }
+  #site h2::before { height: 30px; }
+  .grid { gap: 20px; }
+  .panel { padding: 24px; border-radius: 20px; }
+  footer { margin-top: 56px; }
+}
+
+@media (max-width: 560px) {
+  #down { bottom: 18px; min-height: 46px; padding: 0 22px; font-size: 14px; max-width: calc(100vw - 32px); }
+
+  .top { gap: 6px; padding: 10px 12px; }
+  .top button { min-height: 42px; padding: 0 14px; }
+  .wrap { padding: 0 16px; }
+  .sec { padding: 52px 0 8px; scroll-margin-top: 68px; }
+  #site h2 { font-size: 26px; letter-spacing: -.5px; gap: 10px; flex-wrap: wrap; }
+  #site h2::before { width: 8px; height: 26px; }
+  #site p { font-size: 15px; }
+
+  .card { border-radius: 16px; }
+  .card:hover { transform: none; }                    /* sem "pulinho" em telas de toque */
+  .card .carousel { height: 170px; }
+  .card .body { padding: 18px; }
+  .card .body h3 { font-size: 20px; }
+  .panel { padding: 20px; border-radius: 18px; }
+  .panel:hover { transform: none; }
+
+  .contact-form { padding: 20px; border-radius: 16px; gap: 14px; }
+  .form-group input, .form-group textarea { font-size: 16px; }   /* 16px impede o zoom automático do iOS ao focar */
+  .form-submit-btn { width: 100%; }
+  .compact-links { gap: 8px; }
+  .compact-btn { padding: 10px 14px; flex: 1 1 calc(50% - 8px); justify-content: center; }
+
+  footer { margin-top: 44px; padding-top: 28px; font-size: 13px; padding-left: 8px; padding-right: 8px; }
+  .bg-glow { filter: blur(80px); }
+}
+
+@media (max-width: 360px) {
+  .top button { padding: 0 11px; font-size: 12px; }
+  #site h2 { font-size: 23px; }
+}
+
+/* Telas de toque: o hover não existe, então não "levanta" cards e botões */
+@media (hover: none) {
+  .card:hover, .compact-btn:hover, .top button:hover, .form-submit-btn:hover { transform: none; }
+}
