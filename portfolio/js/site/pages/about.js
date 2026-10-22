@@ -7,15 +7,15 @@ export const aboutPage = {
       <section class="about-layout">
         <div class="about-hero panel reveal">
           <div class="about-portrait">
-            <img class="about-photo" src="${ASSETS.aboutPhoto}" alt="Foto de Keven Cândido" loading="lazy" />
+            <img class="about-photo" src="${ASSETS.aboutPhoto}" alt="Foto de Keven Christian Alves Cândido" loading="lazy" />
           </div>
           <div class="about-intro">
             <span class="about-kicker">Quem sou eu 👋</span>
             <p class="about-bio">
-              Sou <strong>Keven Cândido</strong>, desenvolvedor de jogos focado na criação
+              Sou <strong>Keven Christian Alves Cândido</strong>, desenvolvedor de jogos focado na criação
               de experiências imersivas, sistemas interativos e mecânicas
               envolventes. Trabalho principalmente com Unity e C#, além
-              de utilizar Godot, C++ e ferramentas modernas de controle
+              de utilizar Godot e ferramentas modernas de controle
               de versão.
             </p>
             <div class="about-specialties">
