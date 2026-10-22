@@ -1,0 +1,26 @@
+/* Layout: nav, containers, tipografia, painéis e rodapé */
+  /* Interface estrutural */
+  #site { position: relative; z-index: 10; padding-bottom: 100px; }
+  .top { position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; gap: 12px; padding: 16px 24px;
+         background: rgba(4, 6, 13, 0.7); border-bottom: 1px solid rgba(30, 41, 59, 0.8); backdrop-filter: blur(16px); justify-content: center; }
+  .top button { min-height: 44px; padding: 0 24px; background: rgba(15, 23, 42, 0.8); color: #e2e8f0; border: 1px solid #1e293b; cursor: pointer;
+                font: 600 14px 'Poppins'; transition: all .3s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 22px; }
+  .top button:hover { background: #00e1ff; color: #04060d; border-color: #00e1ff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 225, 255, 0.2); }
+  .top button[data-go="hero"] { background: transparent; color: #00e1ff; border-color: rgba(0, 225, 255, 0.3); }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; }
+  .sec { padding: 80px 0 20px; scroll-margin-top: 80px; }
+  
+  /* Tipografia */
+  #site h2 { margin: 0 0 30px; font-size: 36px; color: #fff; font-weight: 700; letter-spacing: -1px; display: inline-flex; align-items: center; gap: 12px; }
+  #site h2::before { content: ''; display: block; width: 12px; height: 36px; background: #00e1ff; border-radius: 6px; box-shadow: 0 0 15px #00e1ff; }
+  #site h3 { margin: 0 0 8px; font-size: 20px; color: #f8fafc; font-weight: 600; }
+  #site p { margin: 0 0 12px; line-height: 1.7; font-size: 16px; color: #94a3b8; }
+  #site a { color: #00e1ff; transition: color 0.2s, text-shadow 0.2s; text-decoration: none; font-weight: 600; }
+  #site a:hover { color: #fff; text-shadow: 0 0 10px rgba(0, 225, 255, 0.8); }
+
+  /* Painéis da seção Sobre e Contato */
+  .panel { background: rgba(15, 23, 42, 0.5); backdrop-filter: blur(10px); padding: 32px; margin-bottom: 20px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s; }
+  .panel:hover { transform: translateY(-5px); border-color: rgba(0,225,255,0.2); }
+
+  footer { margin-top: 80px; color: #475569; font-size: 14px; text-align: center; font-weight: 600; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); }

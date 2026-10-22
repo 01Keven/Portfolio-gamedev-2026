@@ -1,0 +1,7 @@
+/* Animações de entrada e keyframes globais */
+  /* Animações */
+  .reveal:not(.in) { opacity: 0; }
+  .reveal.in { animation: fadeUp .8s cubic-bezier(.2,.8,.2,1) backwards; animation-delay: calc(var(--i, 0) * .1s); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(40px) scale(0.98); } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 225, 255, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(0, 225, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 225, 255, 0); } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal.in, #down { animation: none; } }

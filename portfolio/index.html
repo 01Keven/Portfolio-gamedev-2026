@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keven Cândido · Game Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Ícones Devicon para tecnologias de jogos e software -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+<!-- Estilos (a ordem importa: a seção Sobre vem por último, como antes) -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/mascot.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+<!-- Luzes de fundo da Landing Page -->
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+
+<header id="hero"><canvas id="stage"></canvas><button id="down" type="button" hidden>Explorar Portfólio ↓</button></header>
+<main id="site" hidden></main>
+<div id="fallback">Não consegui carregar o 3D. Verifique sua conexão e recarregue a página.</div>
+
+<div id="mascot-layer"><canvas id="mascot-canvas" width="60" height="80"></canvas></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>if (typeof THREE === "undefined") document.getElementById("fallback").style.display = "grid";</script>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

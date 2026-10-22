@@ -1,0 +1,4 @@
+/* Mascote sobreposto à página */
+  /* O MASCOTE (Fica sobreposto acompanhando o mouse/scroll) */
+  #mascot-layer { position: fixed; inset: 0; pointer-events: none; z-index: 9999; overflow: hidden; }
+  #mascot-canvas { position: absolute; width: 60px; height: 80px; transform-origin: center bottom; }

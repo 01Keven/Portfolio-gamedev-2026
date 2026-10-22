@@ -1,0 +1,19 @@
+/* Base: reset, fundo, hero, botão principal */
+  html { scroll-behavior: smooth; }
+  /* 🎨 COR: FUNDO DO SITE (Deep Slate) */
+  html, body { margin: 0; background: #04060d; overflow-x: hidden; font-family: 'Poppins', sans-serif; color: #cbd5e1; }
+  
+  /* Efeitos de luz no fundo do HTML (Bolas de energia) */
+  .bg-glow { position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 1; opacity: 0.6; }
+  .glow-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: rgba(0, 225, 255, 0.15); }
+  .glow-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: rgba(255, 122, 0, 0.1); }
+
+  #hero { position: relative; height: 100vh; height: 100svh; z-index: 2; }
+  #stage { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; }
+  
+  /* Botões brilhantes principais */
+  #down { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); min-height: 50px; padding: 0 30px;
+          background: #00e1ff; color: #04060d; border: 0; font: 700 16px 'Poppins', sans-serif; cursor: pointer;
+          animation: pulse 2s infinite; border-radius: 25px; box-shadow: 0 0 20px rgba(0, 225, 255, 0.5); z-index: 10; transition: all 0.3s; }
+  #down:hover { background: #fff; box-shadow: 0 0 40px rgba(0, 225, 255, 0.8); transform: translateX(-50%) scale(1.05); }
+  #fallback { position: fixed; inset: 0; display: none; place-items: center; color: #00e1ff; font: 16px/1.5 'Poppins'; text-align: center; padding: 24px; }
