@@ -158,7 +158,7 @@ export const translations = {
       title: 'About Me',
       kicker: 'Who am I 👋',
       bio: `<p class="about-bio">
-              Hello! I'm <strong>Keven Christian Alves Cândido</strong>, a Game Developer and Unity & C# enthusiast, passionate about creating interactive experiences that delight and engage. I'm passionate about transforming ideas into experiences that people actually want to play.
+              Hello! I'm <strong>Keven Christian Alves Cândido</strong>, a <strong>Game Developer</strong> and <strong>Unity & C# enthusiast</strong>, passionate about creating interactive experiences that delight and engage. I'm passionate about transforming ideas into experiences that people actually want to play.
             </p>
             <p class="about-bio">
               Also working with
