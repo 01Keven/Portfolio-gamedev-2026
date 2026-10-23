@@ -4,13 +4,13 @@ export const PROJECTS = [
     initials: "LR", 
     name: "Lá Vem o Rapa!", 
     genre: "Arcade Action / Runner / Game Jam",
-    text: "Jogo arcade desenvolvido para a GameJamPlus 26/27. Atuei como Product Owner (PO) organizando e gerenciando a equipe de 3 pessoas além de mim: Lucas Aguiar (frontend), Jessé Oliveira (backend) e Celeste Moraes (arte). Também contribuí na programação, principalmente no GameManager.",
+    text: "Jogo arcade desenvolvido para a GameJamPlus 26/27. Desenvolvido sob o tema 'One More Time'. A mecânica central abraça a resiliência de um trabalhador de rua que, mesmo perdendo suas mercadorias, volta no dia seguinte para tentar bater sua meta mais uma vez. Atuei como Product Owner (PO) organizando e gerenciando a equipe de 3 pessoas além de mim: Lucas Aguiar (frontend), Jessé Oliveira (backend) e Celeste Moraes (arte). Também contribuí na programação, principalmente no GameManager.",
     techs: [
       { name: "Unity", class: "devicon-unity-original" },
       { name: "C#", class: "devicon-csharp-plain" },
-      { name: "WebGL", class: "devicon-chrome-plain" }
+      // { name: "WebGL", class: "devicon-chrome-plain" }
     ],
-    tags: ["Game Jam Plus", "Loop Temporal", "Arcade", "PO & Dev"], 
+    tags: ["Game Jam Plus", "Management", "Arcade", "Rogue Like", "PO & Dev"], 
     bg: "linear-gradient(135deg,#00e1ff,#0f172a)", 
     url: "https://keven-christian.itch.io", 
     images: [
@@ -19,31 +19,31 @@ export const PROJECTS = [
       "assets/images/projects/la-vem-o-rapa/rapa03.png",
     ] 
   },
-  { 
-    initials: "DS", 
-    name: "DoomScroll", 
-    genre: "Sátira Social / Simulation",
-    text: "Uma experiência satírica que simula o impacto psicológico do vício em feeds infinitos e algoritmos de vídeos curtos. Enfrente a perda do foco e o caos digital acumulado.",
-    techs: [
-      { name: "Unity", class: "devicon-unity-original" },
-      { name: "C#", class: "devicon-csharp-plain" },
-      { name: "Shader Graph", class: "devicon-opengl-plain" }
-    ],
-    tags: ["Sátira", "Simulation", "2D/3D Hybrid"], 
-    bg: "linear-gradient(135deg,#1e293b,#04060d)", 
-    url: "https://keven-christian.itch.io", 
-    images: [
-      ""
-    ] 
-  },
+  // { 
+  //   initials: "DS", 
+  //   name: "DoomScroll", 
+  //   genre: "Sátira Social / Simulation",
+  //   text: "Uma experiência satírica que simula o impacto psicológico do vício em feeds infinitos e algoritmos de vídeos curtos. Enfrente a perda do foco e o caos digital acumulado.",
+  //   techs: [
+  //     { name: "Unity", class: "devicon-unity-original" },
+  //     { name: "C#", class: "devicon-csharp-plain" },
+  //     { name: "Shader Graph", class: "devicon-opengl-plain" }
+  //   ],
+  //   tags: ["Sátira", "Simulation", "2D/3D Hybrid"], 
+  //   bg: "linear-gradient(135deg,#1e293b,#04060d)", 
+  //   url: "https://keven-christian.itch.io", 
+  //   images: [
+  //     ""
+  //   ] 
+  // },
   { 
     initials: "1S", 
     name: "One Soul, One Cat", 
     genre: "Narrative Adventure / Puzzle / Game Jam",
-    text: "Jogo focado em história e puzzles feito inteiramente por mim para a Mini Code for a Cause 💙 ($500+ Prizes) – A Charity Game Jam!, com tema 'You Only Get One!'. A mecânica principal: você pode escolher UMA única habilidade entre as comuns em jogos (Jump, Sprint, Shot, Grapple) — mas só tem UMA chance de usá-la por fase. O jogo gira em torno de fases de puzzle onde você deve escolher com sabedoria qual skill única vai permitir passar. Desenvolvido na Godot Engine, explore a conexão emocionante entre as memórias de um gato e a alma perdida do seu dono.",
+    text: "Jogo focado em história e puzzles feito inteiramente por mim para a Mini Code for a Cause!, com tema 'You Only Get One!'. A mecânica principal: você pode escolher UMA única habilidade entre as comuns em jogos (Jump, Sprint, Shot, Grapple) mas só tem UMA chance de usá-la por fase. O jogo gira em torno de fases de puzzle onde você deve escolher com sabedoria qual skill única vai permitir passar. Desenvolvido na Godot Engine, explore a conexão emocionante entre as memórias de um gato e a alma perdida do seu dono.",
     techs: [
       { name: "Godot", class: "devicon-godot-plain" },
-      { name: "GDScript", class: "devicon-python-plain" }
+      { name: "C#", class: "devicon-csharp-plain" }
     ],
     tags: ["Narrativo", "Puzzle", "Game Jam", "Solo Dev", "Godot", "One Mechanic"], 
     bg: "linear-gradient(135deg,#0f172a,#1e293b)", 

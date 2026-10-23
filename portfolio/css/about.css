@@ -88,14 +88,11 @@
 @media (max-width: 800px) {
   .about-hero { grid-template-columns: minmax(170px, 34%) minmax(0, 1fr); gap: 24px; padding: 24px; }
   .about-portrait { --s: 190px; }
-  .about-specialties { grid-template-columns: 1fr; margin-top: 18px; }
   .about-columns { gap: 14px; } .about-panel { padding: 20px; }
 }
 @media (max-width: 580px) {
   .about-layout { gap: 15px; }
   .about-hero { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 22px 18px; }
   .about-portrait { --s: 230px; }
-  .about-specialties { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .about-columns { grid-template-columns: minmax(0, 1fr); gap: 15px; }
 }
-@media (max-width: 360px) { .about-specialties { grid-template-columns: minmax(0, 1fr); } }

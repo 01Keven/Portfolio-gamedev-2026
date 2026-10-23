@@ -28,7 +28,47 @@ export const translations = {
     about: {
       title: 'Sobre Mim',
       kicker: 'Quem sou eu 👋',
-      bio: `Olá! Eu sou <strong>Keven Christian Alves Cândido</strong>, desenvolvedor de jogos, principalmente com Unity e C#, e <strong>engenheiro de software</strong> em formação. Sou apaixonado por transformar ideias em experiências que as pessoas realmente querem jogar. Sou apaixonado por jogos, e foi jogando que aprendi a enxergar o que faz uma mecânica ser divertida, um sistema ser claro e uma experiência ser memorável. Hoje, levo esse olhar de jogador para dentro do código. Aqui, você vai encontrar projetos que refletem minha paixão por criar experiências interativas, desde jogos independentes até sistemas complexos.`,
+      bio: `<p class="about-bio">
+              Olá! Eu sou <strong>Keven Christian Alves Cândido</strong>, Game Developer e <strong>Unity & C#</strong> enthusiast, apaixonado por criar experiências interativas que encantam e engajam. Sou
+              apaixonado por transformar ideias em experiências que as pessoas realmente querem jogar.
+            </p>
+            <p class="about-bio">
+              Também trabalho com
+              <strong>Godot (C#)</strong>, o que me dá flexibilidade para escolher a melhor engine para
+              cada ideia, sem perder a profundidade na ferramenta que domino.
+            </p>
+            <div class="about-specialties">
+              <div class="about-specialty">
+                <span class="about-specialty-number">01</span>
+                <div>
+                  <strong>Gameplay & Sistemas</strong>
+                  <small>Mecânicas, controles e sistemas interativos com Unity e C#</small>
+                </div>
+              </div>
+              <div class="about-specialty">
+                <span class="about-specialty-number">02</span>
+                <div>
+                  <strong>Multiplataforma</strong>
+                  <small>Desktop, Mobile, WebGL e VR</small>
+                </div>
+              </div>
+              <div class="about-specialty">
+                <span class="about-specialty-number">03</span>
+                <div>
+                  <strong>Multiplayer & Online</strong>
+                  <small>Networking com Photon e serviços com Firebase</small>
+                </div>
+              </div>
+              <div class="about-specialty">
+                <span class="about-specialty-number">04</span>
+                <div>
+                  <strong>Do protótipo ao lançamento</strong>
+                  <small>Jogos publicados no itch.io</small>
+                </div>
+              </div>
+            </div>
+            `,
+            
       specialties: {
         title: 'FERRAMENTAS',
         subtitle: 'Stack Tecnológico',
@@ -73,7 +113,7 @@ export const translations = {
       }
     },
     // Footer
-    footer: 'Projetado com paixão e Three.js por Keven Cândido.',
+    footer: 'Projetado com paixão e Three.js por Keven Christian Alves Cândido.',
     // Language switcher
     langSwitcher: {
       current: 'PT-BR',
@@ -117,7 +157,49 @@ export const translations = {
     about: {
       title: 'About Me',
       kicker: 'Who am I 👋',
-      bio: `Hi! I'm <strong>Keven Christian Alves Cândido</strong>, a game developer, mainly with Unity and C#, and <strong>software engineer</strong> in training. I'm passionate about turning ideas into experiences people actually want to play. I love games, and it was through playing that I learned what makes a mechanic fun, a system clear, and an experience memorable. Today, I bring that player's perspective into my code. Here, you'll find projects reflecting my passion for creating interactive experiences, from indie games to complex systems.`,
+      bio: `<p class="about-bio">
+              Hello! I'm <strong>Keven Christian Alves Cândido</strong>, a Game Developer and Unity & C# enthusiast, passionate about creating interactive experiences that delight and engage. I'm passionate about transforming ideas into experiences that people actually want to play.
+            </p>
+            <p class="about-bio">
+              Also working with
+              <strong>Godot (C#)</strong>, which gives me the flexibility to choose the best engine for
+              each idea, without losing depth in the tool I master.
+            </p>
+            <div class="about-specialties"> 
+            <div class="about-specialty"> 
+              <span class="about-specialty-number">01</span> 
+            <div> 
+            <strong>Gameplay & Systems</strong> 
+            <small>Mechanics, controls and interactive systems with Unity and C#</small> 
+            </div> 
+            </div> 
+            <div class="about-specialty"> 
+            <span class="about-specialty-number">02</span> 
+            <div> 
+            <strong>Multiplatform</strong> 
+            <small>Desktop, Mobile, WebGL and VR</small> 
+            </div> 
+            </div> 
+            <div class="about-specialty"> 
+            <span class="about-specialty-number">03</span> 
+            <div> 
+            <strong>Multiplayer & Online</strong> 
+            <small>Networking with Photon and services with Firebase</small> 
+            </div> 
+            </div> 
+            <div class="about-specialty"> 
+            <span class="about-specialty-number">04</span>
+
+            <div>
+            <strong>From prototype to launch</strong>
+
+            <small>Games published on itch.io</small>
+
+            </div>
+            </div>
+
+            </div>
+            `,
       specialties: {
         title: 'TOOLS',
         subtitle: 'Tech Stack',
@@ -162,7 +244,7 @@ export const translations = {
       }
     },
     // Footer
-    footer: 'Crafted with passion and Three.js by Keven Cândido.',
+    footer: 'Crafted with passion and Three.js by Keven Christian Alves Cândido.',
     // Language switcher
     langSwitcher: {
       current: 'EN',

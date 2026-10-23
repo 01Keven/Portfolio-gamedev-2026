@@ -18,14 +18,6 @@ export const aboutPage = {
               <span class="about-kicker">${about.kicker}</span>
               <p class="about-bio">${about.bio}</p>
               <div class="about-specialties">
-                ${about.specialties.items.map((item, index) => `
-                  <div class="about-specialty">
-                    <span class="about-specialty-number">${String(index + 1).padStart(2, '0')}</span>
-                    <div>
-                      <strong>${item}</strong>
-                    </div>
-                  </div>
-                `).join('')}
               </div>
             </div>
           </div>
@@ -35,7 +27,7 @@ export const aboutPage = {
             <!-- STACK -->
             <article class="about-panel panel reveal">
               <div class="about-panel-heading">
-                <span class="about-panel-icon"></></span>
+                <span class="about-panel-icon">&lt/&gt;</span>
                 <div>
                   <span class="about-panel-label">${about.specialties.title}</span>
                   <h3>${about.specialties.subtitle}</h3>
