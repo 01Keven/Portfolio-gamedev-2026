@@ -1,16 +1,18 @@
 /* Card de projeto com carrossel e ícones das tecnologias */
 import { esc } from '../../utils/dom.js';
 import { ITCH } from '../data/links.js';
+import { t } from '../i18n.js';
 
 export function renderProjectCard(p, index) {
   const validImages = p.images && p.images.filter(img => img.trim() !== "");
   const hasCarousel = validImages && validImages.length > 1;
   const slides = validImages && validImages.length > 0 ? validImages : [null];
+  const carouselBadge = t('carousel.badge').replace('{count}', validImages.length);
 
   return `
     <a class="card reveal" href="${esc(p.url || ITCH)}" target="_blank" rel="noopener" data-card-id="${index}">
       <div class="carousel">
-        ${hasCarousel ? `<div class="carousel-badge">📷 ${validImages.length} fotos</div>` : ''}
+        ${hasCarousel ? `<div class="carousel-badge">${carouselBadge}</div>` : ''}
         <div class="carousel-slides" id="slides-${index}">
           ${slides.map((imgUrl) => `
             <div class="carousel-slide" style="${imgUrl ? `background-image: url('${esc(imgUrl)}');` : `background: ${p.bg};`}">
@@ -31,18 +33,18 @@ export function renderProjectCard(p, index) {
         <p>${esc(p.text)}</p>
         
         <div class="tech-stack">
-          ${p.techs.map(t => `
-            <div class="tech-item" title="${esc(t.name)}">
-              <i class="${esc(t.class)}"></i>
-              <span>${esc(t.name)}</span>
+          ${p.techs.map(tech => `
+            <div class="tech-item" title="${esc(tech.name)}">
+              <i class="${esc(tech.class)}"></i>
+              <span>${esc(tech.name)}</span>
             </div>
           `).join('')}
         </div>
 
         <div class="tags">
-          ${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}
+          ${p.tags.map(tag => `<span>${esc(tag)}</span>`).join("")}
         </div>
-        <span class="more">Ver na página do projeto</span>
+        <span class="more">${t('projects.more')}</span>
       </div>
     </a>
   `;

@@ -1,4 +1,6 @@
 /* Envio do formulário de contato via Formspree (AJAX) */
+import { t } from './i18n.js';
+
 export function initContactForm() {
   document.addEventListener("submit", async function(e) {
     if (e.target && e.target.id === "contactForm") {
@@ -8,7 +10,7 @@ export function initContactForm() {
       const btn = document.getElementById("submitBtn");
       
       const data = new FormData(form);
-      btn.textContent = "Enviando...";
+      btn.textContent = t('contactForm.sending');
       btn.disabled = true;
 
       try {
@@ -19,18 +21,18 @@ export function initContactForm() {
         });
         
         if (response.ok) {
-          status.textContent = "Mensagem enviada com sucesso! Obrigado pelo contato.";
+          status.textContent = t('contactForm.success');
           status.className = "success";
           form.reset();
         } else {
-          status.textContent = "Ocorreu um erro ao enviar. Tente novamente mais tarde.";
+          status.textContent = t('contactForm.error');
           status.className = "error";
         }
       } catch (error) {
-        status.textContent = "Erro de conexão. Verifique sua internet.";
+        status.textContent = t('contactForm.connectionError');
         status.className = "error";
       } finally {
-        btn.textContent = "Enviar Mensagem";
+        btn.textContent = t('contact.form.submitBtn');
         btn.disabled = false;
       }
     }

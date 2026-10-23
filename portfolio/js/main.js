@@ -14,14 +14,23 @@ import { buildSite } from './site/build.js';
 import { initCarousels } from './site/carousel.js';
 import { initContactForm } from './site/contactForm.js';
 import { initNavigation, enterSite } from './site/navigation.js';
+import { initLangSwitcher } from './site/i18n.js';
 
 // Site (HTML das páginas) e interações
 buildSite();
 initCarousels();
 initContactForm();
 initNavigation();
+initLangSwitcher();
 hooks.enterSite = enterSite;   // o jogo 2D chama isso ao chegar numa bandeira
 initInput();
+
+// Listen for language changes to re-initialize site components
+window.addEventListener('langchange', () => {
+  initCarousels();
+  initContactForm();
+  initNavigation();
+});
 
 addEventListener("resize", resize); resize();
 

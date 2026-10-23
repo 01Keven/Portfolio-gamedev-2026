@@ -5,6 +5,7 @@ import { drawCharacter } from './character.js';
 import { worldToCam, drawTree, drawFlag, drawCenter, drawParticles } from './world.js';
 import { spawnZombie, updateZombies, drawZombie } from './zombies.js';
 import { drawHud } from './hud.js';
+import { t as translate } from '../site/i18n.js';
 
 export function triggerCenter(t) {
   state.jumpT = 0;
@@ -34,7 +35,7 @@ export function drawGame(t, dt) {
     if (d <= step) {
       player.x = player.tx; player.y = player.ty; player.moving = false;
       const f = CONFIG.flags.find(f => Math.hypot(f.x - player.x, f.y - player.y) < 75);
-      if (f) hooks.enterSite(f.label);
+      if (f) hooks.enterSite(f.navTarget);
     } else { player.x += dx / d * step; player.y += dy / d * step; if (Math.abs(dx) > 4) player.dir = dx > 0 ? 1 : -1; }
   }
   
@@ -75,7 +76,7 @@ export function drawGame(t, dt) {
   g.font = "bold 24px 'Poppins'"; g.fillStyle = CONFIG.colors.sand; g.fillText(CONFIG.role, 302, 272);
 
   drawCenter(t);
-  const objs = [...trees.map(p => ({ y: p[1], draw: () => drawTree(p[0], p[1]) })), ...CONFIG.flags.map(f => ({ y: f.y, draw: () => drawFlag(f, t) }))].sort((a, b) => a.y - b.y);
+  const objs = [...trees.map(p => ({ y: p[1], draw: () => drawTree(p[0], p[1]) })), ...CONFIG.flags.map(f => ({ y: f.y, draw: () => drawFlag(f, t, translate(f.labelKey)) }))].sort((a, b) => a.y - b.y);
   objs.forEach(o => o.draw());
   for (const z of state.zombies) drawZombie(z, t);
   drawParticles(dt);
