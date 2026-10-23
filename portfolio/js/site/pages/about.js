@@ -5,6 +5,8 @@ export const aboutPage = {
   title: "Sobre Mim",
   html: () => `
       <section class="about-layout">
+
+        <!-- HERO -->
         <div class="about-hero panel reveal">
           <div class="about-portrait">
             <img class="about-photo" src="${ASSETS.aboutPhoto}" alt="Foto de Keven Cândido" loading="lazy" />
@@ -12,18 +14,21 @@ export const aboutPage = {
           <div class="about-intro">
             <span class="about-kicker">Quem sou eu 👋</span>
             <p class="about-bio">
-              Sou <strong>Keven Cândido</strong>, desenvolvedor de jogos focado na criação
-              de experiências imersivas, sistemas interativos e mecânicas
-              envolventes. Trabalho principalmente com Unity e C#, além
-              de utilizar Godot, C++ e ferramentas modernas de controle
-              de versão.
+              Olá! Eu sou <strong>Keven Christian Alves Cândido</strong>, Game Developer e <strong>Unity & C#</strong> enthusiast, apaixonado por criar experiências interativas que encantam e engajam. Sou
+              apaixonado por transformar ideias em experiências que as pessoas realmente querem jogar.
             </p>
+            <p class="about-bio">
+              Também trabalho com
+              <strong>Godot (C#)</strong>, o que me dá flexibilidade para escolher a melhor engine para
+              cada ideia, sem perder a profundidade na ferramenta que domino.
+            </p>
+
             <div class="about-specialties">
               <div class="about-specialty">
                 <span class="about-specialty-number">01</span>
                 <div>
                   <strong>Gameplay & Sistemas</strong>
-                  <small>Mecânicas e experiências interativas</small>
+                  <small>Mecânicas, controles e sistemas interativos com Unity e C#</small>
                 </div>
               </div>
               <div class="about-specialty">
@@ -33,10 +38,27 @@ export const aboutPage = {
                   <small>Desktop, Mobile, WebGL e VR</small>
                 </div>
               </div>
+              <div class="about-specialty">
+                <span class="about-specialty-number">03</span>
+                <div>
+                  <strong>Multiplayer & Online</strong>
+                  <small>Networking com Photon e serviços com Firebase</small>
+                </div>
+              </div>
+              <div class="about-specialty">
+                <span class="about-specialty-number">04</span>
+                <div>
+                  <strong>Do protótipo ao lançamento</strong>
+                  <small>Jogos publicados no itch.io</small>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="about-columns">
+
+          <!-- STACK -->
           <article class="about-panel panel reveal">
             <div class="about-panel-heading">
               <span class="about-panel-icon">&lt;/&gt;</span>
@@ -46,14 +68,16 @@ export const aboutPage = {
               </div>
             </div>
             <p class="about-panel-description">
-              Tecnologias e ferramentas utilizadas no desenvolvimento de jogos e sistemas interativos.
+              Tecnologias que uso no dia a dia para construir, testar e publicar jogos e sistemas interativos.
             </p>
             <div class="about-tech-list">
-              ${["Unity 3D/2D", "C#", "Godot", "C++", "VR / OpenXR", "Git & GitHub", "Firebase", "Photon Networking", "WebGL"].map((t, i) =>
+              ${["Unity 3D/2D", "C#", "Godot", "Mobile", "Game Design", "VR / OpenXR", "Git & GitHub", "Firebase", "Photon Networking", "WebGL"].map((t, i) =>
                 `<span class="about-tech" style="--i:${i}">${t}</span>`
               ).join("")}
             </div>
           </article>
+
+          <!-- JORNADA -->
           <article class="about-panel panel reveal">
             <div class="about-panel-heading">
               <span class="about-panel-icon">↗</span>
@@ -68,19 +92,21 @@ export const aboutPage = {
                 <div class="about-journey-content">
                   <strong>Residência em Desenvolvimento de Jogos</strong>
                   <p>CEPEDI · Projeto RESTIC 56</p>
-                  <small>Foco na criação e produção de games.</small>
+                  <small>Desenvolvimento e produção de games em ambiente estruturado, com foco em Programação de Jogos 2D e 3D, Programação para Realidade Aumentada (AR) e Virtual (VR), Dispositivos Móveis (Mobile),  Qualidade e Testes, além de Game Design, Roteiro e Ilustração.</small>
                 </div>
               </div>
+              
               <div class="about-journey-item">
                 <span class="about-journey-marker"></span>
                 <div class="about-journey-content">
                   <strong>Engenharia de Software</strong>
-                  <p>Estácio</p>
-                  <small>Bacharelado em andamento.</small>
+                  <p>Estácio · desde 2025</p>
+                  <small>Bacharelado em andamento, com base sólida em lógica, arquitetura e boas práticas.</small>
                 </div>
               </div>
             </div>
           </article>
+
         </div>
       </section>
     `

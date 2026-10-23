@@ -4,7 +4,7 @@ import { game, g, state } from '../core/state.js';
 import { drawStar } from './world.js';
 
 export function drawHud(t) {
-  g.textAlign = "left"; g.font = "bold 18px 'Poppins'"; g.fillStyle = "rgba(23,19,31,.7)"; g.fillRect(14, 14, 250, 34); g.fillStyle = "#fff"; g.fillText(CONFIG.name, 26, 37);
+  g.textAlign = "left"; g.font = "bold 16px 'Poppins'"; g.fillStyle = "rgba(23, 19, 31, 0.34)"; g.fillRect(10, 14, 250, 34); g.fillStyle = "#ffffff7f"; g.fillText("Welcome to my Portfolio", 26, 37);
 
   if (state.hintAlpha > 0 && !state.escaped) {
     const txt = matchMedia("(pointer: coarse)").matches ? "Toque no mapa para andar" : "Clique no mapa para andar"; g.font = "16px 'Poppins'"; g.textAlign = "center"; const w = g.measureText(txt).width + 36;
