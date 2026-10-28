@@ -15,6 +15,7 @@ import { initCarousels } from './site/carousel.js';
 import { initContactForm } from './site/contactForm.js';
 import { initNavigation, enterSite } from './site/navigation.js';
 import { initLangSwitcher } from './site/i18n.js';
+import { preloadAll } from './game/audio.js';
 
 // Site (HTML das páginas) e interações
 buildSite();
@@ -24,6 +25,9 @@ initNavigation();
 initLangSwitcher();
 hooks.enterSite = enterSite;   // o jogo 2D chama isso ao chegar numa bandeira
 initInput();
+
+// Pré-carrega áudios para evitar delay na primeira reprodução
+preloadAll();
 
 // Listen for language changes to re-initialize site components
 window.addEventListener('langchange', () => {

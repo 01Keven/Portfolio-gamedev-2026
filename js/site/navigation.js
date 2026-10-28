@@ -3,6 +3,7 @@ import { player, state, ui } from '../core/state.js';
 import { reducedMotion } from '../core/runtime.js';
 import { spawnMascot, hideMascot } from '../mascot/mascot.js';
 import { siteEl, downBtn } from './dom.js';
+import { startMusic } from '../game/audio.js';
 
 export function go(id) {
   const el = document.getElementById(id);
@@ -14,6 +15,9 @@ export function go(id) {
 export function voltarParaJogo() {
   if (!state.escaped) return;
   state.escaped = false;
+  // Reset flags de áudio para permitir reiniciar a música
+  state.audioStarted = false;
+  state.musicStopped = false;
   hideMascot();
   downBtn.style.display = "";
   ui.entering = false;
@@ -21,6 +25,8 @@ export function voltarParaJogo() {
   player.tx = player.x;
   player.ty = player.y;
   player.moving = false;
+
+  // A música será iniciada no próximo clique (política de autoplay)
 }
 
 export function enterSite(name) {

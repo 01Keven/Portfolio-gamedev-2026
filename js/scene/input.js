@@ -4,6 +4,7 @@ import { game, player, state } from '../core/state.js';
 import { clock } from '../core/runtime.js';
 import { canvas, camera } from './renderer.js';
 import { screenMesh } from './monitor.js';
+import { playSfx, startMusic } from '../game/audio.js';
 
 export const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
 export const look = { x: 0, y: 0 };
@@ -25,6 +26,15 @@ export function initInput() {
     state.clicked = true;
     state.hintAlpha = 0;
     state.marker = { x: player.tx, y: player.ty, t0: clock.elapsedTime };
+
+    // Toca som de clique ao clicar no jogo
+    playSfx('click');
+
+    // Inicia música de fundo na primeira interação (política de autoplay)
+    if (!state.audioStarted) {
+      startMusic();
+      state.audioStarted = true;
+    }
 
     if (Math.hypot(wx - CONFIG.center.x, wy - CONFIG.center.y) < 110) {
       player.tx = CONFIG.center.x;

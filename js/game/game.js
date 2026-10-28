@@ -6,10 +6,14 @@ import { worldToCam, drawTree, drawFlag, drawCenter, drawParticles } from './wor
 import { spawnZombie, updateZombies, drawZombie } from './zombies.js';
 import { drawHud } from './hud.js';
 import { t as translate } from '../site/i18n.js';
+import { playSfx, updateWalkSound, stopMusic } from './audio.js';
 
 export function triggerCenter(t) {
   state.jumpT = 0;
   state.shake = 1;
+
+  // Toca som de bandeira ao chegar no centro (onde surgem os zumbis)
+  playSfx('flag');
 
   const colors = ["#ff6b57", "#e9cf94", "#7ef0c0", "#7aa8ff", "#ffffff"];
   for (let i = 0; i < 70; i++) {
@@ -30,12 +34,29 @@ export function triggerCenter(t) {
 }
 
 export function drawGame(t, dt) {
+  // Atualiza som de passos baseado no movimento do jogador
+  updateWalkSound(player.moving && !state.escaped, dt);
+
+  // Verifica se chegou em uma bandeira (antes de atualizar posição)
+  let reachedFlag = null;
+  if (player.moving && !state.escaped) {
+    const dx = player.tx - player.x, dy = player.ty - player.y, d = Math.hypot(dx, dy); const step = CONFIG.walkSpeed * dt;
+    if (d <= step) {
+      // Jogador chegou ao destino - verifica se é uma bandeira
+      reachedFlag = CONFIG.flags.find(f => Math.hypot(f.x - player.tx, f.y - player.ty) < 75);
+    }
+  }
+
   if (player.moving && !state.escaped) {
     const dx = player.tx - player.x, dy = player.ty - player.y, d = Math.hypot(dx, dy); const step = CONFIG.walkSpeed * dt;
     if (d <= step) {
       player.x = player.tx; player.y = player.ty; player.moving = false;
-      const f = CONFIG.flags.find(f => Math.hypot(f.x - player.x, f.y - player.y) < 75);
-      if (f) hooks.enterSite(f.navTarget);
+      
+      // Toca som de bandeira se chegou em uma
+      if (reachedFlag) {
+        playSfx('flag');
+        hooks.enterSite(reachedFlag.navTarget);
+      }
     } else { player.x += dx / d * step; player.y += dy / d * step; if (Math.abs(dx) > 4) player.dir = dx > 0 ? 1 : -1; }
   }
   
@@ -50,6 +71,12 @@ export function drawGame(t, dt) {
     triggerCenter(t);
   } else if (centerDistance > 120) {
     state.onCenter = false;
+  }
+
+  // Para a música quando o jogador escapa (sai do jogo)
+  if (state.escaped && !state.musicStopped) {
+    stopMusic();
+    state.musicStopped = true;
   }
 
   if (state.clicked) state.hintAlpha = Math.max(0, state.hintAlpha - dt * 1.8);
