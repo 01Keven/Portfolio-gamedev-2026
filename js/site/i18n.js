@@ -29,7 +29,7 @@ export const translations = {
       title: 'Sobre Mim',
       kicker: 'Quem sou eu 👋',
       bio: `<p class="about-bio">
-              Olá! Eu sou <strong>Keven Christian Alves Cândido</strong>, Game Developer e <strong>Unity & C#</strong> enthusiast, apaixonado por criar experiências interativas que encantam e engajam. Sou
+              Olá! Eu sou <strong>Keven Christian Alves Cândido</strong>, Game Developer e <strong>Unity & C#</strong>, apaixonado por criar experiências interativas que encantam e engajam. Sou
               apaixonado por transformar ideias em experiências que as pessoas realmente querem jogar.
             </p>
             <p class="about-bio">
@@ -158,7 +158,7 @@ export const translations = {
       title: 'About Me',
       kicker: 'Who am I 👋',
       bio: `<p class="about-bio">
-              Hello! I'm <strong>Keven Christian Alves Cândido</strong>, a <strong>Game Developer</strong> and <strong>Unity & C# enthusiast</strong>, passionate about creating interactive experiences that delight and engage. I'm passionate about transforming ideas into experiences that people actually want to play.
+              Hello! I'm <strong>Keven Christian Alves Cândido</strong>, a <strong>Game Developer</strong> and <strong>Unity & C#</strong>, passionate about creating interactive experiences that delight and engage. I'm passionate about transforming ideas into experiences that people actually want to play.
             </p>
             <p class="about-bio">
               Also working with
