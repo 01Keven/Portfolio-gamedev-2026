@@ -1,15 +1,3 @@
-# Portfólio · Keven Cândido
-
-Landing page 3D (Three.js) com um mini-jogo 2D dentro do monitor, minigame de zumbis, mascote e seções Projetos / Sobre / Contato.
-
-## Como rodar
-
-O código agora usa **módulos ES** (`import`/`export`), então precisa ser aberto por um servidor local (dar dois cliques no `index.html` não funciona):
-
-- VS Code: extensão **Live Server** → "Go Live"
-- ou `python -m http.server 8000` e abrir http://localhost:8000
-- ou `npx serve`
-
 ## Estrutura
 
 ```
@@ -60,14 +48,3 @@ js/
   utils/dom.js          esc()
 assets/images/          logo, personagem, foto do Sobre e imagens dos projetos
 ```
-
-## Tarefas comuns
-
-- **Novo projeto:** adicione um objeto em `js/site/data/projects.js` e coloque as imagens em `assets/images/projects/<nome>/`.
-- **Nova seção/página:** crie `js/site/pages/<nome>.js` e registre em `js/site/pages/index.js`; adicione um bandeira em `js/config/game.js` se quiser que apareça no mapa.
-- **Trocar imagens:** edite só `js/config/assets.js`.
-- **Ajustar zumbis:** `js/config/zombies.js`.
-
-## Mover as imagens antigas
-
-As imagens que ficavam soltas na raiz e em `Images/` agora vivem em `assets/images/`. Copie-as para esta pasta e rode `mover-assets.ps1` (Windows/PowerShell) ou `bash mover-assets.sh`. Os arquivos `logo-kc.png` e `character-frame.png` já vêm com versões de exemplo.
